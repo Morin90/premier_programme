@@ -3,25 +3,25 @@
 
 
 def demander_age():
-    age = 0
-    while age == 0:
+    age_int = 0
+    while age_int == 0:
         age_str = input("Quel âge avez-vous? ")
         try:
-            age = int(age_str)
-            if age <= 0:
+            age_int = int(age_str)
+            if age_int <= 0:
                 print("ERREUR: L'âge doit être un nombre positif.")
-                age = 0
+                age_int = 0
         except ValueError:
             print("ERREUR: Vous devez rentrer un nombre pour l'âge")
-    return age
+    return age_int
 
 def demander_nom():
-    nom = ""
-    while nom == "":
-        nom = input("Quel est votre nom? ").strip()
-        if nom == "":
+    nom_str = ""
+    while nom_str == "":
+        nom_str = input("Quel est votre nom? ").strip()
+        if nom_str == "":
             print("ERREUR: Le nom ne peut pas être vide ou contenir uniquement des espaces.")
-    return nom
+    return nom_str
 # Demander le nom
 nom = demander_nom()
 # Demander l'âge
